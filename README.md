@@ -5,7 +5,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![](\Diagrams\Cloud_Security_Diagram.png)
+![](/Diagrams/Cloud_Security_Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YML Playbook file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -82,7 +82,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![](\Diagrams\Elk_Docker_PS_Output.png)
+![](/Diagrams/Elk_Docker_PS_Output.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -95,13 +95,13 @@ We have installed the following Beats on these machines:
 - metricbeat
 
 These Beats allow us to collect the following information from each machine:
-Filebeat collects data about the file system. Filebeat has modules for observability and security data sources that simplify the collection, parsing, and visualization of common log formats down to a single command. They achieve this by combining automatic default paths based on your operating system. Common filebeat data would be login attempts
+Filebeat collects data about the file system. Filebeat has modules for observability and security data sources that simplify the collection, parsing, and visualization of common log formats down to a single command. They achieve this by combining automatic default paths based on your operating system. Common filebeat data would be login attempts. Example below:
 
-![](\Diagrams\Filebeat_WebLogin_Test.png)
+![](/Diagrams/Filebeat_WebLogin_Test.png)
 
-Metricbeat collects machine metrics, such as CPU usage. A metric is simply a measurement about an aspect of a system that tells analysts how "healthy" it is.Common metrics is CPU usage: The heavier the load on a machine's CPU, the more likely it is to fail. Analysts often receive alerts when CPU usage gets too high.
+Metricbeat collects machine metrics, such as CPU usage. A metric is simply a measurement about an aspect of a system that tells analysts how "healthy" it is.Common metrics is CPU usage: The heavier the load on a machine's CPU, the more likely it is to fail. Analysts often receive alerts when CPU usage gets too high. Example below:
 
-![](\Diagrams\Metricbeat_WebLoad_Test.png)
+![](/Diagrams/Metricbeat_WebLoad_Test.png)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
