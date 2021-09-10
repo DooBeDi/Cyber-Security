@@ -1,0 +1,30 @@
+---
+- name: Playbook for Webservers
+  hosts: webservers
+  become: true
+  tasks:
+
+  - name: Install docker.io
+    apt:
+      update_cache: yes
+      name: docker.io
+      status: present
+
+  - name: Install Python3-pip
+    apt:
+      force_apt_get: yes
+      name: python3-pip
+      status: present
+
+  - name: Install Python Docker Module
+    pip:
+      name: docker
+      status: present
+
+  - name: Download and launch Docker web container DVWA
+    docker_container:
+      name: dvwa
+      image: cyberxsecurity/dvwa
+      state: started
+      restart_policy: always
+      published_ports: 80:80
