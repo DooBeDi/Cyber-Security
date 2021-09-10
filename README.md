@@ -5,7 +5,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-!\Diagrams\Cloud_Security_Diagram.PNG
+!C:\Users\joeyt\Cyber-Security\Diagrams\Cloud_Security_Diagram.PNG
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YML Playbook file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -82,7 +82,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-!\Diagrams\Elk_Docker_PS_Output.PNG
+!C:\Users\joeyt\Cyber-Security\Diagrams\Elk_Docker_PS_Output.PNG
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -97,11 +97,11 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 Filebeat collects data about the file system. Filebeat has modules for observability and security data sources that simplify the collection, parsing, and visualization of common log formats down to a single command. They achieve this by combining automatic default paths based on your operating system. Common filebeat data would be login attempts
 
-!\Diagrams\Filebeat_WebLogin_Test
+C:\Users\joeyt\Cyber-Security\Diagrams\Filebeat_WebLogin_Test
 
 Metricbeat collects machine metrics, such as CPU usage. A metric is simply a measurement about an aspect of a system that tells analysts how "healthy" it is.Common metrics is CPU usage: The heavier the load on a machine's CPU, the more likely it is to fail. Analysts often receive alerts when CPU usage gets too high.
 
-!\Diagrams\Metricbeat_WebLoad_Test.PNG
+C:\Users\joeyt\Cyber-Security\Diagrams\Metricbeat_WebLoad_Test.PNG
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -120,8 +120,8 @@ SSH into the control node and follow the steps below:
 - Run the playbooks "metricbeat-playbook.YML" and " filebeat-playbook.YML" located in "/etc/ansible/roles" to install metricbeat and filebeat.
 - Navigate to "http://[your.ELK-VM.External.IP]:5601/app/infra#/logs/stream" and "http://[your.ELK-VM.External.IP]:5601/app/infra#/infrastructure/inventory"to check that the filebeat and metricbeat installation worked as expected.
 
-## Notes: IP addresses will differ and will need to be updated to your specific addresses.
-##       To run a playbook use command "ansible-playbook [name of play book].YML"
-##       Both metricbeat and filebeat config files will need to be updated to have the elk VM IP address as the host. Line 1105/1106 and 1805/1806 in "filebeat-config.YML". Line 62/63 in "metricbeat-config.YML". 
-##       Insure "install-elk.YML" has correct "remote_user:"
-##       
+# Notes: IP addresses will differ and will need to be updated to your specific addresses.
+#       To run a playbook use command "ansible-playbook [name of play book].YML"
+#       Both metricbeat and filebeat config files will need to be updated to have the elk VM IP address as the host. Line 1105/1106 and 1805/1806 in "filebeat-config.YML". Line 62/63 in "metricbeat-config.YML". 
+#       Insure "install-elk.YML" has correct "remote_user:"
+#       
