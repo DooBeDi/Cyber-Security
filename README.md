@@ -120,8 +120,8 @@ SSH into the control node and follow the steps below:
 - Run the playbooks "metricbeat-playbook.YML" and " filebeat-playbook.YML" located in "/etc/ansible/roles" to install metricbeat and filebeat.
 - Navigate to "http://[your.ELK-VM.External.IP]:5601/app/infra#/logs/stream" and "http://[your.ELK-VM.External.IP]:5601/app/infra#/infrastructure/inventory"to check that the filebeat and metricbeat installation worked as expected.
 
-# Notes: IP addresses will differ and will need to be updated to your specific addresses.
-#       To run a playbook use command "ansible-playbook [name of play book].YML"
-#       Both metricbeat and filebeat config files will need to be updated to have the elk VM IP address as the host. Line 1105/1106 and 1805/1806 in "filebeat-config.YML". Line 62/63 in "metricbeat-config.YML". 
-#       Insure "install-elk.YML" has correct "remote_user:"
-#       
+### Notes: IP addresses will differ and will need to be updated to your specific addresses.
+###       To run a playbook use command "ansible-playbook [name of play book].YML"
+###       Both metricbeat and filebeat config files will need to be updated to have the elk VM IP address as the host. Line 1105/1106 and 1805/1806 in "filebeat-config.YML". Line 62/63 in "metricbeat-config.YML". 
+###       Insure "install-elk.YML" has correct "remote_user:"
+       
